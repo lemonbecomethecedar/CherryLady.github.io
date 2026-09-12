@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cherrilady ♡</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ticker ticker-top" aria-hidden="true"><div class="ticker-track"></div></div>
+    <div class="ticker ticker-bottom" aria-hidden="true"><div class="ticker-track"></div></div>
+    <button class="motion-toggle" id="motion-toggle" aria-label="Pause decorative motion" title="Pause decorative motion">&#8545;</button>
+    <main id="app">
+      <section class="splash" id="splash" aria-label="Loading cherrilady's site">
+        <div class="splash-card">
+          <p class="eyebrow">A LITTLE TRANSMISSION OF LOVE</p>
+          <div class="loading-orbit" aria-hidden="true"><span>&#9825;</span><i>&#10022;</i></div>
+          <h1>tuning into<br /><em>cherrilady</em></h1>
+          <div class="loading-meta"><span id="loading-copy" role="status">gathering the petals</span><span id="loading-percent">00%</span></div>
+          <div class="loading-line"><i id="loader"></i></div>
+          <p class="splash-foot">soft songs &middot; little keepsakes &middot; a place for you</p>
+        </div>
+      </section>
+
+      <section class="enter-screen is-hidden" id="enter-screen" aria-label="Welcome to Cherrilady">
+        <div class="invitation">
+          <p class="eyebrow">DELIVERED WITH LOVE &middot; JUST FOR YOU</p>
+          <div class="envelope" aria-hidden="true"><span>c</span></div>
+          <p class="invitation-prelude">you found my little corner</p>
+          <h1>stay a little,<br /><em>sweetheart.</em></h1>
+          <p class="invitation-copy">a few favorite songs, a handful of daydreams,<br />and a little piece of me.</p>
+          <button class="enter-button" id="enter-button">click to enter <span>&#8599;</span></button>
+          <label class="sound-choice"><input type="checkbox" id="enter-sound" checked /> enter with music <span>&#9825;</span></label>
+        </div>
+        <p class="entrance-note">make yourself at home.</p>
+      </section>
+
+      <section class="site is-hidden" id="site">
+        <div class="glow glow-one"></div><div class="glow glow-two"></div>
+        <div class="floating-hearts" aria-hidden="true">
+          <i>♥</i><i>♡</i><i>♥</i><i>♡</i><i>♥</i><i>♡</i><i>♥</i><i>♡</i>
+        </div>
+        <div class="camera-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <header class="topbar"><span>cherrilady's personal site</span><span class="status"><span>est. 2026 ♡</span><span class="battery" aria-label="battery full"><i></i> 100%</span></span></header>
+        <div class="layout">
+          <section class="about-panel panel">
+            <div class="avatar-wrap"><img src="avatar/cherri%20vatar.png" alt="Cherrilady" /></div>
+            <p class="hello">hello angel, i'm</p>
+            <h1>cherrilady</h1>
+            <p class="intro">a little corner of the internet for soft songs, late-night thoughts, and all the pretty things i want to keep.</p>
+            <div class="buttons">
+              <button class="paper-button" id="about-button">about me</button>
+              <button class="paper-button" id="games-button">games</button>
+              <button class="paper-button" id="socials-button">socials</button>
+            </div>
+            <div class="note" id="note">psst... be gentle with yourself today ♡</div>
+          </section>
+
+          <aside class="music-panel panel">
+            <button class="floating-lyrics" id="lyrics-button" aria-label="Open lyrics">lyrics?<span>♡</span></button>
+            <div class="side-title">my<br />little<br />playlist</div>
+            <div class="player-info">
+              <p class="now-playing">now playing</p>
+              <p class="track-name" id="track-name">sailor song</p>
+              <p class="track-artist" id="track-artist">gigi perez</p>
+            </div>
+            <div class="controls">
+              <button id="previous" aria-label="Previous song">↞</button>
+              <button class="play" id="play" aria-label="Play">▶</button>
+              <button id="next" aria-label="Next song">↠</button>
+            </div>
+            <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress" />
+            <ol class="playlist" id="playlist"></ol>
+            <audio id="audio" preload="metadata"></audio>
+          </aside>
+        </div>
+        <footer>made with ribbons &amp; too much love <span>♥</span></footer>
+      </section>
+
+      <section class="music-screen is-hidden" id="music-screen" aria-label="Music and lyrics">
+        <header class="listening-header"><div><p class="game-kicker">CHERRILADY'S FREQUENCY</p><h2>the listening room<span> &#9825;</span></h2></div><button class="close-game" id="close-music" aria-label="Return to landing page">&#215;</button></header>
+        <div class="listening-layout">
+          <div class="music-now">
+            <div class="record-sleeve"><span class="sleeve-number">SIDE A / <span id="record-number">01</span></span><div class="vinyl" aria-hidden="true"><div class="record-label"><span>cherrilady</span><b>&#9825;</b><small>songs to keep</small></div></div><span class="sleeve-caption">a soundtrack for the soft-hearted</span></div>
+            <p class="game-kicker playback-state" id="playback-state">READY WHEN YOU ARE</p>
+            <h2 id="music-title">sailor song</h2><p id="music-artist">gigi perez</p>
+            <div class="music-buttons"><button id="music-previous" aria-label="Previous song">&#8606;</button><button id="music-toggle" aria-label="Play">&#9654;</button><button id="music-next" aria-label="Next song">&#8608;</button></div>
+            <input id="music-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Song progress" />
+            <div class="track-times"><span id="elapsed">0:00</span><span id="duration">0:00</span></div>
+            <label class="volume-control">volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7" /></label>
+            <p class="up-next">up next <span id="next-track">harvey &middot; her's</span></p>
+          </div>
+          <div class="lyrics-sheet"><div class="sheet-heading"><p class="game-kicker">THE WORDS WE KEEP</p><span>lyric sheet &#8601;</span></div><div class="lyrics-lines" id="lyrics-lines"></div><p class="lyrics-note" id="lyrics-note"></p></div>
+          <aside class="track-library"><div class="library-heading"><p class="game-kicker">ON REPEAT</p><span>07 songs</span></div><div class="song-row" id="music-song-row"></div><p class="library-note">for the late nights<br />& the tender hearts. &#9825;</p></aside>
+        </div>
+      </section>
+
+      <section class="about-screen is-hidden" id="about-screen" aria-label="About Cherri">
+        <header class="chapter-header"><div><p class="game-kicker">THE PERSONAL ARCHIVE / 01</p><span>a few pages of me</span></div><button class="close-game" id="close-about" aria-label="Return to landing page">×</button></header>
+        <div class="about-journal">
+          <aside class="portrait-column"><figure class="portrait-print"><img src="avatar/cherri%20vatar.png" alt="Cherrilady's avatar" /><figcaption>yours, cherri ♡</figcaption></figure><div class="identity-slip"><p class="game-kicker">LITTLE DETAILS</p><dl><div><dt>birthday</dt><dd>18 january</dd></div><div><dt>born in</dt><dd>Africa</dd></div><div><dt>favorite season</dt><dd>winter</dd></div></dl><div class="color-keepsakes" aria-label="Favorite colors: pink, white, black and red"><i></i><i></i><i></i><i></i><span>my kind of palette</span></div></div><p class="margin-note">a little ink,<br />a little heart.</p></aside>
+        <div class="about-card"><p class="game-kicker">A LITTLE INTRODUCTION</p><h2>who is <em>cherri?</em></h2><p class="journal-deck">the person behind this little corner of the internet.</p>
+          <div class="about-grid"><article><h3>♡ basics</h3><p>born on the 18th of January in Africa, grew up to love the world with all its flaws. ૮˶ᵔ ᗜ ᵔ˶ ྀིა</p></article><article><h3>♡ likes</h3><p>writing poems, books, song lyrics &amp; drawing, Edgar Allan Poe, pets, winter, pink, white, black and red. Reading Manhwa and watching anime. &lt;3</p></article><article><h3>♡ dislikes</h3><p>illegal media, loud noises because of phobia, being alone with my thoughts, and anyone being rude to my friends. (¬`‸´¬)</p></article><article><h3>♡ sexuality</h3><p>an asexual cupioromantic!</p></article></div>
+          <article class="loved-ones"><h3>♡ loved ones</h3><p>Schatzi, Alms, Kanna, Mim, Kenny, Nao, Cat, Harper, Athena, Shivi, Phro, Rea, Scorpy, Extinct, Bunni, Amelia, Lemon my cutie, Thundy, and everyone that's been there for me! I love you all. ( ˶°ㅁ°) !!</p></article><p class="thank-you">thank you for reading! (˶˃𐃷˂˶)</p>
+        </div></div><p class="chapter-footer">filed under: things close to my heart <span>with love, always ♡</span></p>
+      </section>
+
+      <section class="social-screen is-hidden" id="social-screen" aria-label="Cherri's socials">
+        <button class="close-game" id="close-socials" aria-label="Return to landing page">×</button>
+        <div class="social-card"><p class="game-kicker">find me elsewhere</p><h2>let's be <em>mutuals</em></h2><p>come say hello ♡</p><div class="social-links"><a href="https://www.instagram.com/cherry_.girly?igsi=MTZraXRpeDFuMWJuMw==" target="_blank" rel="noopener noreferrer"><img src="icons/icon%201.gif" alt="" /><strong>instagram</strong><span>↗</span></a><a href="https://open.spotify.com/user/31ntmhqaqu5gceebrvuedpl2nx6m?si=eCrW1SE0TjmuC1ew6SGz6w&utm_source=copy-link" target="_blank" rel="noopener noreferrer"><span>↗</span><strong>spotify</strong><img src="icons/icon%202.gif" alt="" /></a></div><p class="social-note">more little corners soon...</p></div>
+      </section>
+
+      <section class="game-intro is-hidden" id="game-intro" aria-label="How to play Catch My Heart">
+        <header class="chapter-header"><div><p class="game-kicker">THE LITTLE ARCADE / 02</p><span>something sweet to pass the time</span></div><button class="close-game" id="close-intro" aria-label="Return to landing page">×</button></header>
+        <div class="intro-card">
+          <div class="arcade-ticket"><span>ADMIT ONE</span><span>♡</span><span>NO. 001</span></div>
+          <p class="game-kicker">A SMALL GAME, MADE WITH LOVE</p>
+          <h2>catch my <em>heart.</em></h2><p class="arcade-deck">some things are too lovely to let fall.</p>
+          <div class="game-preview" aria-hidden="true">
+            <img class="preview-heart" src="game assets/falling hearts.png" alt="" />
+            <img class="preview-basket" src="game assets/baskets.gif" alt="" />
+          </div>
+          <div class="goal-copy"><p><span>01 / COLLECT</span><b>keep them close</b>guide your basket under the falling hearts.</p><p><span>02 / FOLLOW</span><b>find your rhythm</b>each little collection makes the rain quicker.</p><p><span>03 / CHERISH</span><b>five little chances</b>miss five hearts and your round is complete.</p></div>
+          <button class="paper-button game-launch" id="game-launch">let's catch some love ↗</button><p class="control-hint">mouse or touch · ← → arrow keys · P to pause</p>
+        </div>
+      </section>
+
+      <section class="game-screen is-hidden" id="game-screen" aria-label="Catch My Heart game">
+        <div class="game-card">
+          <header class="chapter-header"><div><p class="game-kicker">CHERRILADY'S LITTLE ARCADE</p><h2>catch my <em>heart.</em></h2></div><div class="arcade-actions"><button id="game-sound" aria-pressed="true" aria-label="Mute game sounds">sound on</button><button id="game-pause" disabled>pause Ⅱ</button><button class="close-game" id="close-game" aria-label="Close game">×</button></div></header>
+          <div class="scoreboard"><span>collected <b id="current-score">0</b></span><span>personal best <b id="high-score">0</b></span><span class="lives">chances <b id="lives">♥ ♥ ♥ ♥ ♥</b></span><span class="round-label" id="round-label">a gentle beginning</span></div>
+          <div class="game-field" id="game-field" tabindex="0" role="region" aria-label="Heart catching playfield. Use left and right arrow keys to move, and P to pause.">
+            <div class="field-decoration" aria-hidden="true"><span>♡</span><span>✧</span><span>♡</span><span>✧</span><p>love is in the air</p></div>
+            <div class="game-instructions" id="game-instructions" role="status"><span class="game-kicker" id="result-kicker">A LITTLE BREATHER</span><strong id="result-title">take your time.</strong><span id="result-copy">your hearts will be waiting.</span></div>
+            <img class="basket" id="basket" src="game assets/baskets.gif" alt="Basket" draggable="false" />
+          </div>
+          <div class="game-bottom"><p class="control-hint">move with mouse, touch or ← → <span>· P to pause</span></p><button class="paper-button game-start" id="game-start">play a game ↗</button></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
